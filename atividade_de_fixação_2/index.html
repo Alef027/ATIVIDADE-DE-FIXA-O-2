@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade de fixação 2</title>
+</head>
+<body>
+    <!--Exercicio 1-->
+    <script>
+        let numero_int1 = parseFloat(prompt("Digite um numero: "));
+        console.log(numero_int1);
+
+        let numero_int2 = parseFloat(prompt("Digite outro numero: "));
+        console.log(numero_int2);
+
+        function calcula_media() {
+            return (numero_int1 + numero_int2)/2;
+        }
+
+        console.log(calcula_media(numero_int1, numero_int2));
+
+        function calcula_produto(numero_int1, numero_int2) {
+            return numero_int1 * numero_int2;
+        }
+
+        console.log(calcula_produto(numero_int1, numero_int2));
+    </script>
+    
+    <!--Exercicio 2-->
+    <script>
+
+        let peso_1 = parseInt(prompt("Digite o peso da primeira prova: "));
+        console.log(peso_1);
+
+        let peso_2 = parseInt(prompt("Digite o peso da segunda prova: "));
+        console.log(peso_2);
+
+        let matricula = parseInt(prompt("Digite a matricula do aluno: "));
+        console.log(matricula);
+
+        let nota_1 = parseFloat(prompt("Digite a nota da primeira prova: "));
+        console.log(nota_1);
+
+        let nota_2 = parseFloat(prompt("Digite a nota da segunda prova: "));
+        console.log(nota_2);
+
+        function calcula_media_ponderada(peso_1, nota_1, peso_2, nota_2) {
+            c = (peso_1 * nota_1 + peso_2 * nota_2)  / (peso_1 + peso_2);
+            return c;
+        }
+        console.log(calcula_media_ponderada(peso_1, nota_1, peso_2, nota_2));
+
+    </script>
+
+    <script>
+        
+    </script>
+</body>
+</html>
