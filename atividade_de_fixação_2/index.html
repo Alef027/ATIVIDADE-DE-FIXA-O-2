@@ -7,7 +7,7 @@
     <title>Atividade de fixação 2</title>
 </head>
 <body>
-    <!--Exercicio 1-->
+    <!--Exercício 1-->
     <script>
         let numero_int1 = parseFloat(prompt("Digite um numero: "));
         console.log(numero_int1);
@@ -21,14 +21,19 @@
 
         console.log(calcula_media(numero_int1, numero_int2));
 
+        let media_aritimetica = calcula_media(numero_int1, numero_int2);
+
         function calcula_produto(numero_int1, numero_int2) {
             return numero_int1 * numero_int2;
         }
 
-        console.log(calcula_produto(numero_int1, numero_int2));
+        let produto = calcula_produto(numero_int1, numero_int2);
+
+        alert(`O valor da média aritimética é: ${media_aritimetica} e o valor do produto é: ${produto}`);
+
     </script>
     
-    <!--Exercicio 2-->
+    <!--Exercício 2-->
     <script>
 
         let peso_1 = parseInt(prompt("Digite o peso da primeira prova: "));
@@ -50,12 +55,120 @@
             c = (peso_1 * nota_1 + peso_2 * nota_2)  / (peso_1 + peso_2);
             return c;
         }
-        console.log(calcula_media_ponderada(peso_1, nota_1, peso_2, nota_2));
+
+        let media = calcula_media_ponderada(peso_1, nota_1, peso_2, nota_2);
+
+        console.log(media);
+
+        alert(`Matricula do aluno: ${matricula} média: ${media}`);
 
     </script>
 
+    <!--Exercício 3-->
     <script>
+        peso_1 = parseInt(prompt("Digite o peso da primeira prova: "));
+        console.log(peso_1);
+
+        peso_2 = parseInt(prompt("Digite o peso da segunda prova: "));
+        console.log(peso_2);
+
+        matricula = parseInt(prompt("Digite a matricula do aluno: "));
+        console.log(matricula);
+
+        nota_1 = parseFloat(prompt("Digite a nota da primeira prova: "));
+        console.log(nota_1);
+
+        nota_2 = parseFloat(prompt("Digite a nota da segunda prova: "));
+        console.log(nota_2);
+
+        function calcula_media_ponderada01(y, x) {
+            c = (y * x)  / y;
+            return c;
+        }
+
+        media01 = calcula_media_ponderada01(peso_1, nota_1);
+
+        console.log(media01);
+
+        media02 = calcula_media_ponderada01(peso_2, nota_2);
+
+        console.log(media02)
+
+        produto = calcula_produto(media01, media02);
+
+        alert(`Matricula do aluno: ${matricula} produto da média ponderada é: ${produto}`);
+    </script>
+
+    <!--Exercício 04-->
+    <script>
+        peso_1 = parseInt(prompt("Digite o peso da primeira prova: "));
+        console.log(peso_1);
+
+        peso_2 = parseInt(prompt("Digite o peso da segunda prova: "));
+        console.log(peso_2);
+
+        matricula = parseInt(prompt("Digite a matricula do aluno: "));
+        console.log(matricula);
+
+        nota_1 = parseFloat(prompt("Digite a nota da primeira prova: "));
+        console.log(nota_1);
+
+        nota_2 = parseFloat(prompt("Digite a nota da segunda prova: "));
+        console.log(nota_2);
+
+        function calcula_media_ponderada(peso_1, nota_1, peso_2, nota_2) {
+            c = (peso_1 * nota_1 + peso_2 * nota_2)  / (peso_1 + peso_2);
+            return c;
+        }
         
+        media01 = calcula_media_ponderada(peso_1, nota_1, peso_2, nota_2);
+
+        console.log(media01);
+
+        peso_1 = parseInt(prompt("Digite o peso da primeira prova: "));
+        console.log(peso_1);
+
+        peso_2 = parseInt(prompt("Digite o peso da segunda prova: "));
+        console.log(peso_2);
+
+        matricula01 = parseInt(prompt("Digite a matricula do aluno: "));
+        console.log(matricula01);
+
+        nota_1 = parseFloat(prompt("Digite a nota da primeira prova: "));
+        console.log(nota_1);
+
+        nota_2 = parseFloat(prompt("Digite a nota da segunda prova: "));
+        console.log(nota_2);
+
+        function calcula_media_ponderada(peso_1, nota_1, peso_2, nota_2) {
+            c = (peso_1 * nota_1 + peso_2 * nota_2)  / (peso_1 + peso_2);
+            return c;
+        }
+        
+        media02 = calcula_media_ponderada(peso_1, nota_1, peso_2, nota_2);
+
+        console.log(media02);
+
+        alert(`Matricula do aluno: ${matricula} média: ${media01}
+        Matricula do aluno: ${matricula01} média: ${media02}`);
+    </script> 
+
+    <!--Exercicio 05-->
+    <script>
+        let gasto = parseFloat(prompt("Digite o valor gasto: "));
+
+        console.log(gasto);
+
+        function taxa_de_servico(gasto) {
+            c = (gasto * 0,1) + gasto;
+        }
+
+        let valor_a_ser_pago = taxa_de_servico(gasto);
+
+        console.log(valor_a_ser_pago);
+
+        alert(`O valor a ser pago é: ${valor_a_ser_pago}`);
+
     </script>
 </body>
 </html>
