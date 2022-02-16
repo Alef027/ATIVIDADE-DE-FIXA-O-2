@@ -29,7 +29,7 @@
 
         let produto = calcula_produto(numero_int1, numero_int2);
 
-        alert(`O valor da média aritimética é: ${media_aritimetica} e o valor do produto é: ${produto}`);
+        alert(`O valor da média aritimética é: ${media_aritimetica.toFixed(2)} e o valor do produto é: ${produto}`);
 
     </script>
     
@@ -60,7 +60,7 @@
 
         console.log(media);
 
-        alert(`Matricula do aluno: ${matricula} média: ${media}`);
+        alert(`Matricula do aluno: ${matricula} média: ${media.toFixed(2)}`);
 
     </script>
 
@@ -96,7 +96,7 @@
 
         produto = calcula_produto(media01, media02);
 
-        alert(`Matricula do aluno: ${matricula} produto da média ponderada é: ${produto}`);
+        alert(`Matricula do aluno: ${matricula} produto da média ponderada é: ${produto.toFixed(2)}`);
     </script>
 
     <!--Exercício 04-->
@@ -149,8 +149,8 @@
 
         console.log(media02);
 
-        alert(`Matricula do aluno: ${matricula} média: ${media01}
-        Matricula do aluno: ${matricula01} média: ${media02}`);
+        alert(`Matricula do aluno: ${matricula} média: ${media01.toFixed(2)} 
+        Matricula do aluno: ${matricula01} média: ${media02.toFixed(2)}`); 
     </script> 
 
     <!--Exercicio 05-->
@@ -159,16 +159,54 @@
 
         console.log(gasto);
 
-        function taxa_de_servico(gasto) {
-            c = (gasto * 0,1) + gasto;
+        function taxa_de_servico(x) {
+            c = x * 0.1;
+            return c; 
         }
+        
+        console.log(taxa_de_servico(gasto));
 
-        let valor_a_ser_pago = taxa_de_servico(gasto);
+        let valor_a_ser_pago = taxa_de_servico(gasto) + gasto;
 
         console.log(valor_a_ser_pago);
 
-        alert(`O valor a ser pago é: ${valor_a_ser_pago}`);
+        alert(`O valor a ser pago é: ${valor_a_ser_pago.toFixed(2)}`);
 
     </script>
+
+    <!--Exercício 06-->
+    <script>
+        let salario = parseFloat(prompt("Digite o valor do salário bruto: "));
+
+        console.log(salario);
+
+        function INSS(x) {
+            c = x * 0.1;
+            return c
+        }
+
+        let desconto_inss = INSS(salario);
+        
+        console.log(desconto_inss);
+
+        function fgts(y) {
+            c = y * 0.08;
+            return c;
+        }
+
+        let desconto_fgts = fgts(salario);
+
+        console.log(desconto_fgts);
+
+        let plano_de_saude = 100;
+
+        console.log(plano_de_saude);
+
+        alert(`Salário bruto: R$${salario.toFixed(2)}
+        (-) INSS ( 10%): R$${desconto_inss.toFixed(2)}
+        (-) FGTS: R$${desconto_fgts.toFixed(2)}
+        (-) Plano de Saúde: R$${plano_de_saude.toFixed(2)}`);
+    </script>
+    
 </body>
 </html>
