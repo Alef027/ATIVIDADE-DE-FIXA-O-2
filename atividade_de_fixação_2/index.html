@@ -202,10 +202,13 @@
 
         console.log(plano_de_saude);
 
+        let salario_liq = salario - desconto_inss - desconto_fgts - plano_de_saude;
+
         alert(`Salário bruto: R$${salario.toFixed(2)}
         (-) INSS ( 10%): R$${desconto_inss.toFixed(2)}
         (-) FGTS: R$${desconto_fgts.toFixed(2)}
-        (-) Plano de Saúde: R$${plano_de_saude.toFixed(2)}`);
+        (-) Plano de Saúde: R$${plano_de_saude.toFixed(2)}
+        Salário Liquido: R$${salario_liq.toFixed(2)}`);
     </script>
     
 </body>
